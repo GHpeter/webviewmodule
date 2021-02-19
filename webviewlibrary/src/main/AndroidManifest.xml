@@ -2,9 +2,11 @@
     package="com.cliff.webviewlibrary">
 
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application android:usesCleartextTraffic="true">
         <activity android:name=".WebViewActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:process=":cliffWebView"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
     </application>
 </manifest>

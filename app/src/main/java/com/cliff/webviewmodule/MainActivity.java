@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
                 //迭代器
                 IWebViewService iWebViewService = WebServiceLoader.load(IWebViewService.class);
                 if (iWebViewService!=null){
-                    iWebViewService.startWebViewActivity(MainActivity.this,"https://www.baidu.com","百度",false);
+                    iWebViewService.startDemoHtml(MainActivity.this);
+//                    iWebViewService.startWebViewActivity(MainActivity.this,"https://www.baidu.com","百度",false);
                 }
             }
         });
