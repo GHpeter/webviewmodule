@@ -5,11 +5,13 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        versionCode rootProject.versionCode
-        versionName rootProject.versionName
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -18,17 +20,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     dataBinding {
         enabled true
     }
 }
 
 dependencies {
-
     implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
-
-    implementation rootProject.googleAutoServiceDependency
     annotationProcessor rootProject.googleAutoServiceDependency
+    implementation rootProject.googleAutoServiceDependency
     api project(":common")
-
 }

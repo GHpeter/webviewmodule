@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cliff.webviewlibrary">
-
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    package="com.cliff.webview">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:usesCleartextTraffic="true">
         <activity android:name=".WebViewActivity"
-            android:process=":cliffWebView"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
+            android:process=":cliffwebview"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <service android:name=".mainprocess.MainProcessCommandService"/>
     </application>
 </manifest>

@@ -19,26 +19,26 @@
     <script>
         function callAppToast(){
             console.log("callAppToast.");
-            webJs.takeNativeAction("showToast", {message: "this is a message from html."});
+            xiangxuejs.takeNativeAction("showToast", {message: "this is a message from html."});
         }
         function openActivityA(){
             console.log("openActivityA.");
-            webJs.takeNativeAction("openPage", {target_class: "com.xiangxue.webview.MainProcessTestActivity"});
+            xiangxuejs.takeNativeAction("openPage", {target_class: "com.xiangxue.webview.MainProcessTestActivity"});
         }
         function openActivityB(){
             console.log("openActivityA.");
-            webJs.takeNativeAction("openPage", {target_class: "com.xiangxue.webview.MainProcessTestActivityB"});
+            xiangxuejs.takeNativeAction("openPage", {target_class: "com.xiangxue.webview.MainProcessTestActivityB"});
         }
         function login(){
             console.log("login.");
-            webJs.takeNativeActionWithCallback("login", {}, function(res) {
+            xiangxuejs.takeNativeActionWithCallback("login", {}, function(res) {
                  var element = document.createElement("div");
                  element.appendChild(document.createTextNode("userName: "+res.accountName));
                  document.getElementById('login_id').appendChild(element);
             });
         }
     </script>
-    <script src="js/webJs.js" charset="utf-8"></script>
+    <script src="js/xiangxuejs.js" charset="utf-8"></script>
 </head>
 <body style="height: 100%;">
 <div class="item" style="font-size: 20px; color: #ffffff" onclick="callAppToast()">调用: showToast</div>

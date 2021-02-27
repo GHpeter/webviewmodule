@@ -3,14 +3,14 @@ package com.cliff.base.autoservice;
 import java.util.ServiceLoader;
 
 public final class WebServiceLoader {
-    private  WebServiceLoader(){
-
+    private WebServiceLoader() {
     }
-    public  static <S>  S load(Class<S> service){
-        try{
+
+    public static <S> S load(Class<S> service) {
+        try {
             return ServiceLoader.load(service).iterator().next();
-        }catch (Exception e){
-            return  null;
+        } catch (Exception e) {
+            return null;
         }
     }
 }

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.cliff.webviewlibrary.webviewprocess.BaseWebView
+        <com.cliff.webview.webviewprocess.BaseWebView
 
             android:id="@+id/webview"
             android:layout_width="match_parent"
